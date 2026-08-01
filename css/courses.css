@@ -1,0 +1,233 @@
+/* ========================================
+   Stiluri pentru Pagina de Cursuri
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* ========== NAVBAR STYLES ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #141829 !important; /* Albastru închis */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-link img {
+    height: 35px;
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ffffff; /* Alb pentru iconiță pe mobil */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff !important; /* Text alb pentru vizibilitate pe albastru închis */
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: #93c5fd !important; /* Un albastru deschis la hover */
+}
+
+/* ========== COURSES GRID SECTION ========== */
+.courses-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.section-subhead {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.grid-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.course-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e2e8f0;
+    color: #1a1a2e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.course-card .meta {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.course-card .date {
+    font-size: 14px;
+    color: #1a6be5;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.btn-details {
+    display: inline-block;
+    background-color: #141829;
+    color: #fff;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #1a6be5;
+}
+
+/* ========== TEXT + IMAGE SECTION ========== */
+.text-image-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.text-content .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #1a6be5;
+}
+
+.text-content p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.benefits-list li {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .burger-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #141829; /* Meniu mobil pe albastru închis */
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .text-image-section {
+        grid-template-columns: 1fr;
+    }
+}

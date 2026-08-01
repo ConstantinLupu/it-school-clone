@@ -1,0 +1,362 @@
+/* ===========================
+   VARIABILE
+=========================== */
+:root {
+    --text-primary: #101d42;
+    --text-secondary: #fbb44c;
+    --text-dark: #2b2922;
+    --text-light: #eaeaea;
+    --text-white: #ffffff;
+
+    --bg-primary: #141e4c;
+    --bg-secondary: #dfedf5;
+    --bg-dark: #101d42;
+    --bg-light: #ffffff;
+
+    --button-color: #2bb585;
+
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+
+    --mobile-logo-height: 45px;
+}
+
+/* ===========================
+   RESET
+=========================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--text-light);
+}
+h2 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+}
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+p {
+    font-size: var(--fs-medium);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
+}
+
+/* ===========================
+   CLASE REUTILIZABILE
+=========================== */
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    z-index: 2;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo-link {
+    padding: 0;
+}
+
+nav img {
+    width: auto;
+    height: 50px;
+}
+
+nav .menu-icon {
+    color: var(--text-light);
+    display: none;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: var(--spacing-medium);
+}
+
+nav .arrow-down-icon {
+    font-size: var(--fs-large);
+    position: absolute;
+}
+
+nav a:hover {
+    color: var(--text-white);
+}
+
+/* Submeniul trebuie să fie ascuns inițial */
+nav .submenu {
+    display: none; 
+    position: absolute;
+    top: calc(100% - var(--spacing-small));
+    left: var(--spacing-medium);
+    width: 10rem;
+    padding: var(--spacing-tiny) 0;
+    background-color: var(--bg-dark);
+    z-index: 3;
+}
+
+/* REGULA MAGICĂ: Fără ea, meniul nu apare la click! */
+nav .submenu.show {
+    display: block;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: var(--bg-dark);
+    margin-top: 60px; /* din noul CSS */
+}
+
+footer p {
+    font-size: var(--spacing-small);
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--spacing-medium);
+}
+
+/* ===========================
+   HERO (nou)
+=========================== */
+.hero {
+    margin-top: 80px;
+    background-color: var(--bg-primary);
+    padding: 70px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: var(--text-white);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.hero p {
+    color: var(--text-white);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Modificator pentru Hero-ul verde de pe alte pagini */
+.hero.hero-green {
+    background-color: var(--button-color); /* Aceasta este variabila mea pentru verde */
+    min-height: 250px;
+}
+/* ===========================
+   TRAINERS (nou)
+=========================== */
+.trainers {
+    background-color: #f5f7fb;
+    padding: 60px 0;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* ===========================
+   CARD TRAINER (nou)
+=========================== */
+.trainer-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-6px);
+}
+
+.trainer-card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.trainer-info {
+    flex: 1;
+}
+
+.trainer-info h2 {
+    margin: 0 0 5px;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+}
+
+.trainer-info h3 {
+    margin: 0 0 18px;
+    color: #9c9c9c;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.trainer-info p {
+    line-height: 1.8;
+}
+
+/* ===========================
+   MEDIA QUERIES (unificate)
+=========================== */
+
+/* Tablete și ecrane mai mici de 992px */
+@media (max-width: 992px) {
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobil (max-width: 768px) – combinăm stilurile pentru nav și conținut */
+@media (max-width: 768px) {
+    /* NAV */
+    nav img {
+        height: var(--mobile-logo-height);
+    }
+    nav ul {
+        display: none;
+    }
+    nav .menu-icon {
+        display: block;
+    }
+    nav .arrow-down-icon {
+        display: none;
+    }
+
+    nav .menu-icon-container {
+        position: relative;
+    }
+    nav input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+    nav input[type="checkbox"]:checked ~ ul {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: calc(var(--mobile-logo-height) + 2 * var(--spacing-medium));
+        left: 0;
+        background-color: var(--bg-dark);
+    }
+
+    /* HERO */
+    .hero {
+        padding: 50px 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* CARD TRAINER */
+    .trainer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .trainer-card img {
+        margin: 0 auto 20px;
+    }
+    .trainer-info h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Telefoane foarte mici (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .trainer-card {
+        padding: 20px;
+    }
+}
+footer p {
+    font-size: var(--fs-medium); /* Am schimbat în variabila pentru font */
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--spacing-medium);
+}
