@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clonă IT School - Contact</title>
+    
+    <!-- Fonturi și Iconițe Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <!-- CSS Extern -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="container-contact">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/itschool-logo.png" alt="itschool logo" />
+        </a>
+        <div class="menu-icon-container">
+          <span class="material-symbols-outlined menu-icon"> menu </span>
+          <input type="checkbox" />
+          <ul>
+            <li><a href="courses.html"> Cursuri Online </a></li>
+            <li class="about-us">
+              <a href="about.html">
+                Despre Noi
+                <span class="material-symbols-outlined arrow-down-icon"> arrow_drop_down </span>
+              </a>
+              <div class="submenu">
+                <a href="../index.html">IT School</a>
+                <a href="about.html">Despre Noi</a>
+              </div>
+            </li>
+            <li><a href="contact.html"> Contact </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="contact-page">
+      <!-- Secțiunea Albastră (Hero) -->
+      <section class="hero-banner">
+        <div class="container-contact hero-content">
+          <h1>Suntem aici să te ajutăm</h1>
+          <img src="../img/poza 1.1.1.png" alt="Contact Support" class="hero-image" />
+        </div>
+      </section>
+
+      <!-- Cardul principal de contact -->
+      <section class="contact-section">
+        <div class="container-contact">
+          <div class="contact-card">
+            
+            <!-- Coloana Stângă: Formular -->
+            <div class="form-column">
+              
+              <!-- AICI SE ÎNTÂMPLĂ MAGIA: Înlocuiește cu adresa ta -->
+              <form class="contact-form" action="https://formsubmit.co/constantinlupu511@gmail.com" method="POST">
+                
+                <!-- Câmpuri ascunse pentru funcționalitate -->
+                <!-- Folosim _next pentru redirect pe FormSubmit -->
+                <input type="hidden" name="_next" value="https://elegant-arithmetic-d94ac2.netlify.app/contact.html">
+                <input type="hidden" name="_subject" value="Mesaj nou de pe site-ul IT School Clone!">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-row">
+                  <div class="input-group">
+                    <label for="nume">Nume</label>
+                    <input type="text" id="nume" name="nume" required />
+                  </div>
+                  <div class="input-group">
+                    <label for="prenume">Prenume</label>
+                    <input type="text" id="prenume" name="prenume" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="input-group">
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" id="telefon" name="telefon" required />
+                  </div>
+                  <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="mesaj">Mesaj</label>
+                  <textarea id="mesaj" name="mesaj" placeholder="Salut, IT School!" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="termeni" name="termeni" required />
+                  <label for="termeni">
+                    *Prin completarea acestui formular, ești de acord cu <a href="#">Termenii și Condițiile</a> IT School
+                  </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Trimite mesajul</button>
+              </form>
+            </div>
+
+            <!-- Coloana Dreaptă: Informații Generale -->
+            <div class="info-column">
+              <h2>Informații generale</h2>
+              <p class="description">
+                Nu ai găsit ce căutai sau ai nevoie de informații suplimentare? Alege modalitatea de comunicare preferată și contactează-ne. Îți reamintim că <a href="faq.html">aici</a> regăsești o listă cu întrebări frecvente.
+              </p>
+
+              <ul class="contact-details">
+                <li>
+                  <span class="material-symbols-outlined icon">call</span>
+                  <span>+40 737 880 420</span>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined icon">mail</span>
+                  <span>office@itschool.ro</span>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined icon">location_on</span>
+                  <span>Blv. General Ion Dragalina, Nr. 27, Timișoara</span>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined icon">schedule</span>
+                  <span>Luni - Vineri, 10:00 - 18:00</span>
+                </li>
+              </ul>
+
+              <p class="description disclaimer">
+                Înainte de a ne face o vizită la sediu, vă recomandăm să ne sunați pentru a stabili o programare. Lucrăm adesea remote și e posibil să nu fie nimeni disponibil la sediu fără o programare prealabilă. Vom fi încântați să vă întâmpinăm!
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-contact" style="text-align: center; padding: 20px 0;">
+        <p>IT School România © 2021. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </body>
+</html>
